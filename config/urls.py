@@ -18,8 +18,10 @@ from django.contrib import admin
 from django.urls import path
 
 from source_manager.views import greetings
+from first_app.views import first_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home-page', greetings, name='greetings'),
+    path('home-page/', greetings, name='greetings'),
+    path('first/', first_view, name='first_view'),
 ]
